@@ -1,0 +1,19 @@
+In the first link (https://www.airbnb.co.uk/rooms/33571268), it is showing an error
+(Service request authorization error: You do not have permission to access this resource. (status code 403)) where the error code is code 403 which is an Http error 
+for forbidden.
+
+To solve this issue and to get actual content on the browser screen, i would go to console for that page and check the actual error. I did this and found the 
+actual error is 405 status code which means "server has rejected the specific HTTP method the web browser is using".
+
+To solve this issue or any other issue related to http request after doing the above mentioned steps i would go to the backend routes and check the spefic route 
+for this url or page. I would start with checking all the conditions and responses that route generating. 
+
+This will double check all the condition and help us find the actual error. i would try different conditions and try printing different messages.
+
+If every condition works as it should work then i would try to find the specific case where the above mentioned link is being requested by the browser. As per the error
+code 405, the request is using wrong http method. I would change the http method according to the type of request in that condition.
+
+As per my knowledge, it should be making "GET" request to get the property data from the backend. Changing the method to GET should solve this problem. 
+
+But it is not mandatory that changing the request method to GET would solve the problem as it mainly depend on the type of data we are displaying on the web page. To 
+find the actual error i have to check the code.
